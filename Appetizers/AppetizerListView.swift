@@ -7,17 +7,18 @@
 
 import SwiftUI
 
-struct ApptizerListView: View {
+struct AppetizerListView: View {
     var body: some View {
         NavigationView{
             List(MockData.appetizeer,id: \.id){ appetizer in
-                Text(appetizer.description)
+                AppetizerListCell(appetizer: appetizer)
             }
+            .navigationTitle("Appetizer")
         }
         
     }
 }
 
 #Preview {
-    ApptizerListView()
+    AppetizerListView()
 }
